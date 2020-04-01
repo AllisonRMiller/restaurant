@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
+import 'bootstrap/dist/css/bootstrap.css';
 import Menu from "./components/menu";
 import Navbar from "./components/navbar";
 import Header from "./components/header";
+import $ from 'jquery'
+import popper from 'popper.js'
 import * as serviceWorker from './serviceWorker';
 
 

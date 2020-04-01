@@ -1,7 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import $ from 'jquery'
-import popper from 'popper.js'
 import axios from 'axios';
 // import Work from "./work"
 
@@ -16,6 +13,7 @@ async function phoneHome(x) {
     // .then(response => { return (response.menu_items) })
     return res;
 }
+
 
 // generates random prices
 function priceGenerator(min,max){
@@ -84,16 +82,15 @@ class Appetize extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        {/* accordion here */}
-                        {/* <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#app-collapse">Appetizers</button> */}
+                        <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+                        <a className="navbar-brand mx-auto">Appetizers</a>
+                        </nav>
                         <div className="row">
-                        {/* <div className="collapse" id="app-collapse"> */}
                         {this.state.localMenu.map(x=> (generateDish(x)))}   
                         </div>
-                        </div>
                     </div>
                     </div>
-                // </div>
+                </div>
         )
     }
 

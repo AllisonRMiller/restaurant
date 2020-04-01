@@ -1,8 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import "./navbar-top.css";
-import $ from 'jquery'
-import popper from 'popper.js'
+import "./navbar-top-fixed.css";
 
 // Navbar with logo, gradient background, fades from color into transparent, collapse at medium
 
@@ -20,8 +17,8 @@ class Navbar extends React.Component{
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
-            <div className="container mr-5">
-              <ul className="navbar-nav">
+            {/* <div className="container mr-5"> */}
+              <ul className="navbar-nav mx-auto">
                 <li className="nav-item active">
                   <a className="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
                 </li>
@@ -33,7 +30,7 @@ class Navbar extends React.Component{
                 </li>
               </ul>
             </div>
-            </div>
+            {/* </div> */}
           </nav>
           </div>
         )
