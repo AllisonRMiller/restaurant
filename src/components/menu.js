@@ -5,7 +5,7 @@ import popper from 'popper.js'
 import axios from 'axios';
 // import Work from "./work"
 
-// TODO: Finish accordion, save to local storage
+// TODO: Finish accordion
 // call to API
 async function phoneHome(x) {
     var link = "https://entree-f18.herokuapp.com/v1/menu/" + x;
@@ -33,10 +33,11 @@ function generateDish(x) {
     console.log(price);
     var id = x.id;
     return (
-        <div className="col-3" key={id}>
+        <div className="col-3" key={id} id={id}>
         <div className="card">
             <div className="card-body">
-                <p className="card-text">{text}<div className="text-right">${price}</div></p>
+                <p className="card-text">{text}</p>
+                <p className="card-text text-right">${price}</p>
             </div>
         </div>
         </div>
@@ -67,10 +68,10 @@ class Appetize extends React.Component {
     async componentDidMount() {
         var prevMenu = JSON.parse(window.localStorage.getItem("appetizers"));
         console.log(prevMenu);
-        if (prevMenu === null) {var newMenu = (await phoneHome(8)); await console.log({newMenu}); var currentMenu = newMenu}
+        if (prevMenu === null) {var newMenu = (await phoneHome(8)); await console.log({newMenu}); newMenu.map((x)=>{x.id="app"+newMenu.indexOf(x); x.price=priceGenerator(5,10) });var currentMenu = newMenu;}
         else {currentMenu= prevMenu }
-        currentMenu.map((x)=>{x.id="app"+currentMenu.indexOf(x); x.price=priceGenerator(5,10) })
         console.log(currentMenu)
+        if (prevMenu === null) {await localStorage.setItem("appetizers", JSON.stringify(currentMenu))}
         await this.setState({localMenu: currentMenu})
     }
 
@@ -80,16 +81,19 @@ class Appetize extends React.Component {
 
 
         return (
+            <div className="container">
                 <div className="row">
                     <div className="col-12">
                         {/* accordion here */}
-                        <div className="accordion">
-                        {this.state.localMenu.map(x=> (generateDish(x)))}
-                        {/* map across cards here */}
+                        {/* <button className="btn btn-link" type="button" data-toggle="collapse" data-target="#app-collapse">Appetizers</button> */}
+                        <div className="row">
+                        {/* <div className="collapse" id="app-collapse"> */}
+                        {this.state.localMenu.map(x=> (generateDish(x)))}   
                         </div>
-
+                        </div>
                     </div>
-                </div>
+                    </div>
+                // </div>
         )
     }
 

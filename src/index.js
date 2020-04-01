@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import Menu from "./components/menu";
+import Navbar from "./components/navbar";
+import Header from "./components/header";
 import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <Navbar />
+    <Header />
     <Menu />
   </React.StrictMode>,
   document.getElementById('root')
