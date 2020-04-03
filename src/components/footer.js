@@ -14,7 +14,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className="jumbotron mb-0" id="Contact">
+            <div className="jumbotron jumbotron-fluid mb-0" id="Contact">
                 <div className="container">
                     <h1 className="display-3 text-light">We are always here to help</h1>
                     <p className="text-light">Phone: (859) 555-555</p>
