@@ -185,7 +185,7 @@ class Desert extends React.Component {
     async componentDidMount() {
         var prevMenu = JSON.parse(window.localStorage.getItem("desert"));
         if (prevMenu === null) {
-            var newMenu = (await phoneHome(7));
+            var newMenu = (await phoneHome(8));
             newMenu.forEach((x) => {
                 x.id = "app" + newMenu.indexOf(x);
                 x.price = priceGenerator(4, 9)
@@ -240,7 +240,7 @@ class Dinner extends React.Component {
     async componentDidMount() {
         var prevMenu = JSON.parse(window.localStorage.getItem("dinner"));
         if (prevMenu === null) {
-            var newMenu = (await phoneHome(15));
+            var newMenu = (await phoneHome(16));
             newMenu.forEach((x) => {
                 x.id = "app" + newMenu.indexOf(x);
                 x.price = priceGenerator(9, 20)
@@ -295,7 +295,7 @@ class Lunch extends React.Component {
     async componentDidMount() {
         var prevMenu = JSON.parse(window.localStorage.getItem("lunch"));
         if (prevMenu === null) {
-            var newMenu = (await phoneHome(10));
+            var newMenu = (await phoneHome(12));
             newMenu.forEach((x) => {
                 x.id = "app" + newMenu.indexOf(x);
                 x.price = priceGenerator(8, 15)
@@ -351,7 +351,7 @@ class Breakfast extends React.Component {
     async componentDidMount() {
         var prevMenu = JSON.parse(window.localStorage.getItem("breakfast"));
         if (prevMenu === null) {
-            var newMenu = (await phoneHome(10));
+            var newMenu = (await phoneHome(12));
             newMenu.forEach((x) => {
                 x.id = "app" + newMenu.indexOf(x);
                 x.price = priceGenerator(8, 14)
