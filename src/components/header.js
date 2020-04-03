@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// TODO: Redo header with colored interior
 function Header() {
 
     return (
