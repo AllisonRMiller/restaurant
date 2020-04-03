@@ -10,15 +10,15 @@ import Footer from "./components/footer";
 import "./components/bootstraptheme.css"
 import * as serviceWorker from './serviceWorker';
 
-document.title="Juniper Road";
+document.title = "Juniper Road";
 
 ReactDOM.render(
   <React.StrictMode>
-  <div className="bg-light">
-    <Navbar />
-    <Header />
-    <Menu />
-    <Footer />
+    <div className="bg-light">
+      <Navbar />
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   </React.StrictMode>,
   document.getElementById('root')
