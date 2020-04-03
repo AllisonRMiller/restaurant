@@ -1,0 +1,18 @@
+
+#headjumbo{
+  background-image: url("./patrick-hendry-qSmomJCEUiA-unsplash.jpg");
+}
+
+
+#Contact{
+  background-image: url("./jez-timms-IlpXSjNSNRI-unsplash.jpg");
+}
+
+#headjumbo, #Contact{
+  background-size: cover;
+  height: 100%;
+}
+
+#headjumbo, #Contact, #Hours{
+  text-align: center;
+}

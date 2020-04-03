@@ -1,14 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
+import 'bootstrap/dist/css/bootstrap.css';
+import "./components/jumbotron.css";
 import Menu from "./components/menu";
+import Navbar from "./components/navbar";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import "./components/bootstraptheme.css"
 import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
   <React.StrictMode>
+  <div className="bg-light">
+    <Navbar />
+    <Header />
     <Menu />
+    <Footer />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
