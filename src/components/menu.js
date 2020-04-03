@@ -81,7 +81,7 @@ function priceGenerator(min, max) {
 }
 
 
-// generates cards with details for dishes
+// generates cards with details for dishes TODO: fix price placement
 function generateDish(x) {
     if (x.name != null) {
         var name = x.name;
@@ -141,9 +141,9 @@ class Appetize extends React.Component {
             currentMenu = prevMenu
         }
         if (prevMenu === null) {
-            await localStorage.setItem("appetizers", JSON.stringify(currentMenu))
+            localStorage.setItem("appetizers", JSON.stringify(currentMenu))
         }
-        await this.setState({
+        this.setState({
             localMenu: currentMenu
         })
     }
@@ -196,9 +196,9 @@ class Desert extends React.Component {
             currentMenu = prevMenu
         }
         if (prevMenu === null) {
-            await localStorage.setItem("desert", JSON.stringify(currentMenu))
+            localStorage.setItem("desert", JSON.stringify(currentMenu))
         }
-        await this.setState({
+        this.setState({
             localMenu: currentMenu
         })
     }
@@ -251,9 +251,9 @@ class Dinner extends React.Component {
             currentMenu = prevMenu
         }
         if (prevMenu === null) {
-            await localStorage.setItem("dinner", JSON.stringify(currentMenu))
+            localStorage.setItem("dinner", JSON.stringify(currentMenu))
         }
-        await this.setState({
+        this.setState({
             localMenu: currentMenu
         })
     }
@@ -306,9 +306,9 @@ class Lunch extends React.Component {
             currentMenu = prevMenu
         }
         if (prevMenu === null) {
-            await localStorage.setItem("lunch", JSON.stringify(currentMenu))
+            localStorage.setItem("lunch", JSON.stringify(currentMenu))
         }
-        await this.setState({
+        this.setState({
             localMenu: currentMenu
         })
     }
@@ -362,9 +362,9 @@ class Breakfast extends React.Component {
             currentMenu = prevMenu
         }
         if (prevMenu === null) {
-            await localStorage.setItem("breakfast", JSON.stringify(currentMenu))
+            localStorage.setItem("breakfast", JSON.stringify(currentMenu))
         }
-        await this.setState({
+        this.setState({
             localMenu: currentMenu
         })
     }

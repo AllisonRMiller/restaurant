@@ -10,6 +10,7 @@ import Footer from "./components/footer";
 import "./components/bootstraptheme.css"
 import * as serviceWorker from './serviceWorker';
 
+document.title="Juniper Road";
 
 ReactDOM.render(
   <React.StrictMode>
