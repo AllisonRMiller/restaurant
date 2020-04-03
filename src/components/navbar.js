@@ -1,6 +1,8 @@
 import React from 'react';
 
 
+
+// TODO: Change "Menu" to dropdown that can jump to each menu section?
 function Navbar() {
   return (
     <div>
