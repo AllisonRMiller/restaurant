@@ -5,7 +5,7 @@ function Header (){
 
         return (
             <div>
-                <div className="jumbotron jumbotron-fluid" id="headjumbo">
+                <div className="jumbotron jumbotron-fluid mt-3" id="headjumbo">
                     <div className="container">
                     <img src="./images/Toast & Clink.png" alt="logo reading Juniper Road: Rustic Fine Dining over two crossed arrows"/>
                         <h3 className="display-3 text-light">Rustic & Refined</h3>

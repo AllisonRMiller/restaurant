@@ -1,14 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 
-// call to API
+// call to API TODO: Make this trigger an error popup if the call fails
 async function phoneHome(x) {
     var link = "https://entree-f18.herokuapp.com/v1/menu/" + x;
     console.log(link);
     var res="";
     await axios.get(link).then(function (response){res=response.data.menu_items;console.log(res);return(res)}).catch(function(error){console.log(error)})
     // .finally(res=>{return (res)})
-    // .then(response => { return (response.menu_items) })
     return res;
 }
 
@@ -113,8 +112,8 @@ class Appetize extends React.Component {
             <div className="container mb-5">
                 <div className="row">
                     <div className="col-12">
-                        <nav className="navbar navbar-expand-md navbar-dark bg-dark text-light">
-                        <a className="navbar-brand mx-auto">Appetizers</a>
+                        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                        <h3 className="navbar-text mx-auto text-light mb-0">Appetizers</h3>
                         </nav>
                         <div className="border border-primary mt-0">
                         <div className="container mt-4">
@@ -157,8 +156,8 @@ class Desert extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <nav className="navbar navbar-expand-md navbar-dark bg-dark text-light">
-                        <a className="navbar-brand mx-auto">Deserts</a>
+                        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                        <h3 className="navbar-text mx-auto text-light mb-0">Deserts</h3>
                         </nav>
                         <div className="border border-primary mt-0 mb-4">
                         <div className="container mt-4">
@@ -201,8 +200,8 @@ class Dinner extends React.Component {
             <div className="container mb-5">
                 <div className="row">
                     <div className="col-12">
-                        <nav className="navbar navbar-expand-md navbar-dark bg-dark text-light">
-                        <a className="navbar-brand mx-auto">Dinner</a>
+                        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                        <h3 className="navbar-text mx-auto text-light mb-0">Dinner</h3>
                         </nav>
                         <div className="border border-primary mt-0">
                         <div className="container mt-4">
@@ -245,8 +244,8 @@ class Lunch extends React.Component {
             <div className="container mb-5">
                 <div className="row">
                     <div className="col-12">
-                        <nav className="navbar navbar-expand-md navbar-dark bg-dark text-light">
-                        <a className="navbar-brand mx-auto">Lunch</a>
+                        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                        <h3 className="navbar-text mx-auto text-light mb-0">Lunch</h3>
                         </nav>
                         <div className="border border-primary mt-0">
                         <div className="container mt-4">
@@ -288,8 +287,8 @@ class Breakfast extends React.Component {
             <div className="container mb-5">
                 <div className="row">
                     <div className="col-12">
-                        <nav className="navbar navbar-expand-md navbar-dark bg-dark text-light">
-                        <a className="navbar-brand mx-auto">Breakfast</a>
+                        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                        <h3 className="navbar-text mx-auto text-light mb-0">Breakfast</h3>
                         </nav>
                         <div className="border border-primary mt-0">
                         <div className="container mt-4">
@@ -333,8 +332,8 @@ class Cocktails extends React.Component {
             <div className="container mb-5">
                 <div className="row">
                     <div className="col-12">
-                        <nav className="navbar navbar-expand-md navbar-dark bg-dark text-light">
-                        <a className="navbar-brand mx-auto">Cocktails</a>
+                        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                        <h3 className="navbar-text mx-auto text-light mb-0">Cocktails</h3>
                         </nav>
                         <div className="border border-primary mt-0">
                         <div className="container mt-4">

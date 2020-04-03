@@ -4,7 +4,7 @@ import React from 'react';
 function Navbar (){
         return (
             <div>
-            <nav className="navbar navbar-expand-md navbar-dark bg-dark text-light" id="topnav">
+            <nav className="navbar navbar-expand-md fixed-top navbar-dark bg-dark text-light" id="topnav">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -17,7 +17,7 @@ function Navbar (){
                   <a className="nav-link" href="#Hours">Hours & Location</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Contact Us</a>
+                  <a className="nav-link" href="Contact">Contact Us</a>
                 </li>
               </ul>
             </div>
